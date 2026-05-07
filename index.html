@@ -1034,6 +1034,387 @@
     box-shadow: 0 8px 30px rgba(239,68,68,0.5);
   }
 
+  /* PRICING SECTION */
+  .pricing-section {
+    background: var(--off-white);
+    padding: 6rem 5%;
+  }
+
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 4rem;
+    line-height: 1.7;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    align-items: start;
+  }
+
+  .pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.2rem 2rem;
+    border: 1.5px solid rgba(255,140,0,0.12);
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(255,140,0,0.13);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--mango);
+    box-shadow: 0 12px 50px rgba(255,140,0,0.22);
+    transform: scale(1.03);
+  }
+
+  .pricing-card.featured:hover {
+    transform: scale(1.03) translateY(-6px);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--mango);
+    color: white;
+    padding: 0.3rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .plan-tier {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mango-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .plan-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 0.8rem;
+  }
+
+  .plan-desc {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    min-height: 56px;
+  }
+
+  .plan-price {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.3rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .price-currency {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--mango-dark);
+    line-height: 1.8;
+  }
+
+  .price-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1;
+  }
+
+  .price-period {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .plan-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .plan-features li {
+    font-size: 0.88rem;
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .plan-features li .tick {
+    color: var(--mango);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .plan-features li .free-badge {
+    background: rgba(46,204,113,0.12);
+    color: #27ae60;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.1rem 0.45rem;
+    border-radius: 50px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .plan-divider {
+    border: none;
+    border-top: 1px dashed rgba(255,140,0,0.2);
+    margin: 1.2rem 0;
+  }
+
+  .plan-optional-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-light);
+    margin-bottom: 0.7rem;
+  }
+
+  .plan-addons {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan-addons li {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .addon-price {
+    font-weight: 600;
+    color: var(--mango-dark);
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+
+  .plan-cta {
+    display: block;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    width: 100%;
+  }
+
+  .plan-cta.primary {
+    background: var(--mango);
+    color: white;
+    box-shadow: 0 4px 16px rgba(255,140,0,0.3);
+  }
+
+  .plan-cta.primary:hover {
+    background: var(--mango-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255,140,0,0.4);
+  }
+
+  .plan-cta.outline {
+    border: 2px solid rgba(255,140,0,0.35);
+    color: var(--mango-dark);
+    background: transparent;
+  }
+
+  .plan-cta.outline:hover {
+    background: var(--mango-pale);
+    border-color: var(--mango);
+    transform: translateY(-2px);
+  }
+
+  .pricing-note {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.88rem;
+    margin-top: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  .pricing-note a {
+    color: var(--mango-dark);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-card.featured { transform: scale(1); }
+    .pricing-card.featured:hover { transform: translateY(-6px); }
+  }
+
+  /* ONE-TIME PRICING */
+  .onetime-divider {
+    max-width: 1200px;
+    margin: 2rem auto 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .onetime-divider::before,
+  .onetime-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,140,0,0.25), transparent);
+  }
+  .onetime-divider-label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: white;
+    border: 1.5px solid rgba(255,140,0,0.25);
+    border-radius: 50px;
+    padding: 0.5rem 1.4rem;
+    white-space: nowrap;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--mango-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .onetime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto 2rem;
+  }
+  .onetime-card {
+    background: white;
+    border-radius: 24px;
+    padding: 2.2rem 2rem;
+    border: 1.5px solid rgba(255,140,0,0.15);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .onetime-card::after {
+    content: 'ONE-TIME';
+    position: absolute;
+    top: 20px;
+    right: -26px;
+    background: var(--mango-pale);
+    color: var(--mango-dark);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 2.4rem;
+    transform: rotate(35deg);
+    border-top: 1px solid rgba(255,140,0,0.2);
+    border-bottom: 1px solid rgba(255,140,0,0.2);
+  }
+  .onetime-card.bundle::after {
+    background: var(--mango);
+    color: white;
+  }
+  .onetime-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(255,140,0,0.13);
+    border-color: rgba(255,140,0,0.3);
+  }
+  .onetime-emoji { font-size: 2.4rem; margin-bottom: 0.8rem; display: block; }
+  .onetime-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+  .onetime-desc {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.4rem;
+    min-height: 52px;
+  }
+  .onetime-price-block {
+    background: var(--mango-pale);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .onetime-price-block .ot-label { font-size: 0.78rem; color: var(--text-light); font-weight: 600; }
+  .onetime-price-block .ot-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--mango-dark);
+  }
+  .onetime-price-block .ot-suffix { font-size: 0.78rem; color: var(--text-light); margin-top: 0.2rem; }
+  .onetime-includes {
+    list-style: none;
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .onetime-includes li {
+    font-size: 0.87rem;
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    line-height: 1.45;
+  }
+  .onetime-includes li .tick { color: var(--mango); font-weight: 700; flex-shrink: 0; }
+  .onetime-caveat {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    background: rgba(255,140,0,0.06);
+    border-left: 3px solid var(--mango-light);
+    padding: 0.6rem 0.9rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 1.4rem;
+    line-height: 1.5;
+  }
+
   /* SCROLL ANIMATIONS */
   .reveal {
     opacity: 0;
@@ -1059,6 +1440,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact" class="nav-cta">Let's Talk 👋</a></li>
   </ul>
 </nav>
@@ -1332,6 +1714,209 @@
       </a>
     </div>
   </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-header reveal">
+    <div class="section-tag">💳 Simple Pricing</div>
+    <h2 class="section-title">Pick the Plan That Fits Your Business</h2>
+  </div>
+  <p class="pricing-subtitle reveal">No hidden fees. No long contracts. Cancel anytime. Optional add-ons let you customise exactly what you need.</p>
+
+  <div class="pricing-grid">
+
+    <!-- BASIC -->
+    <div class="pricing-card reveal">
+      <div class="plan-tier">Starter</div>
+      <div class="plan-name">Basic</div>
+      <div class="plan-desc">Perfect for small venues just getting started with AI. Covers the essentials.</div>
+      <div class="plan-price">
+        <span class="price-currency">£</span>
+        <span class="price-amount">199</span>
+        <span class="price-period">/mo</span>
+      </div>
+      <ul class="plan-features">
+        <li><span class="tick">✓</span> AI Chatbot on your website</li>
+        <li><span class="tick">✓</span> Up to 200 conversations/mo</li>
+        <li><span class="tick">✓</span> Automated booking & FAQs</li>
+        <li><span class="tick">✓</span> Email support</li>
+        <li><span class="tick">✓</span> 48-hour setup</li>
+      </ul>
+      <a href="#contact" class="plan-cta outline">Get Started →</a>
+    </div>
+
+    <!-- MEDIUM — FEATURED -->
+    <div class="pricing-card featured reveal">
+      <div class="popular-badge">⭐ Most Popular</div>
+      <div class="plan-tier">Growth</div>
+      <div class="plan-name">Professional</div>
+      <div class="plan-desc">The sweet spot for busy London restaurants — chatbot + phone bot working together 24/7.</div>
+      <div class="plan-price">
+        <span class="price-currency">£</span>
+        <span class="price-amount">449</span>
+        <span class="price-period">/mo</span>
+      </div>
+      <ul class="plan-features">
+        <li><span class="tick">✓</span> Everything in Basic</li>
+        <li><span class="tick">✓</span> AI Phone Bot (300 mins/mo)</li>
+        <li><span class="tick">✓</span> Unlimited conversations</li>
+        <li><span class="tick">✓</span> SMS booking confirmations</li>
+        <li><span class="tick">✓</span> No-show protection</li>
+        <li><span class="tick">✓</span> <span>Google review monitoring</span> <span class="free-badge">FREE</span></li>
+        <li><span class="tick">✓</span> <span>Onboarding call with DK</span> <span class="free-badge">FREE</span></li>
+      </ul>
+      <hr class="plan-divider">
+      <div class="plan-optional-title">⚙️ Optional Add-ons</div>
+      <ul class="plan-addons">
+        <li><span>Extra phone bot minutes</span><span class="addon-price">+£49/mo</span></li>
+        <li><span>WhatsApp integration</span><span class="addon-price">+£59/mo</span></li>
+        <li><span>Monthly performance report</span><span class="addon-price">+£29/mo</span></li>
+      </ul>
+      <a href="#contact" class="plan-cta primary">Get Started 🚀</a>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="pricing-card reveal">
+      <div class="plan-tier">Scale</div>
+      <div class="plan-name">Premium</div>
+      <div class="plan-desc">For multi-location operators or high-volume venues wanting full AI coverage.</div>
+      <div class="plan-price">
+        <span class="price-currency">£</span>
+        <span class="price-amount">699</span>
+        <span class="price-period">/mo</span>
+      </div>
+      <ul class="plan-features">
+        <li><span class="tick">✓</span> Everything in Professional</li>
+        <li><span class="tick">✓</span> Unlimited phone bot minutes</li>
+        <li><span class="tick">✓</span> Custom AI personality & voice</li>
+        <li><span class="tick">✓</span> WhatsApp integration</li>
+        <li><span class="tick">✓</span> Priority phone support</li>
+        <li><span class="tick">✓</span> <span>Monthly performance report</span> <span class="free-badge">FREE</span></li>
+        <li><span class="tick">✓</span> <span>Custom AI training</span> <span class="free-badge">FREE</span></li>
+      </ul>
+      <hr class="plan-divider">
+      <div class="plan-optional-title">⚙️ Optional Add-ons</div>
+      <ul class="plan-addons">
+        <li><span>Dedicated account manager</span><span class="addon-price">+£99/mo</span></li>
+        <li><span>2nd location chatbot</span><span class="addon-price">+£149/mo</span></li>
+      </ul>
+      <a href="#contact" class="plan-cta outline">Get Started →</a>
+    </div>
+
+    <!-- ELITE -->
+    <div class="pricing-card reveal" style="background: linear-gradient(145deg, #1A0A00, #3D1500); border-color: rgba(255,179,71,0.3);">
+      <div class="plan-tier" style="color: var(--mango-light);">Elite</div>
+      <div class="plan-name" style="color: white;">Enterprise</div>
+      <div class="plan-desc" style="color: rgba(255,255,255,0.6);">Full white-glove AI transformation — bespoke, fully managed, end-to-end for serious operators.</div>
+      <div class="plan-price">
+        <span class="price-currency" style="color: var(--mango-light);">£</span>
+        <span class="price-amount" style="color: white;">999</span>
+        <span class="price-period" style="color: rgba(255,255,255,0.5);">/mo</span>
+      </div>
+      <ul class="plan-features">
+        <li><span class="tick">✓</span> <span style="color:rgba(255,255,255,0.85);">Everything in Premium</span></li>
+        <li><span class="tick">✓</span> <span style="color:rgba(255,255,255,0.85);">Dedicated account manager</span></li>
+        <li><span class="tick">✓</span> <span style="color:rgba(255,255,255,0.85);">Up to 3 locations</span></li>
+        <li><span class="tick">✓</span> <span style="color:rgba(255,255,255,0.85);">Bespoke AI training & branding</span></li>
+        <li><span class="tick">✓</span> <span style="color:rgba(255,255,255,0.85);">Weekly strategy calls with DK</span></li>
+        <li><span class="tick">✓</span> <span style="color:rgba(255,255,255,0.85);">All add-ons included</span> <span class="free-badge">FREE</span></li>
+        <li><span class="tick">✓</span> <span style="color:rgba(255,255,255,0.85);">First month setup fee waived</span> <span class="free-badge">FREE</span></li>
+      </ul>
+      <a href="#contact" class="plan-cta primary" style="margin-top:1rem;">Talk to DK 👋</a>
+    </div>
+
+  </div>
+
+  <!-- ONE-TIME DIVIDER -->
+  <div class="onetime-divider reveal">
+    <div class="onetime-divider-label">🔧 Prefer to own it outright? One-time options below</div>
+  </div>
+
+  <!-- ONE-TIME GRID -->
+  <div class="onetime-grid">
+
+    <!-- CHATBOT ONLY -->
+    <div class="onetime-card reveal">
+      <span class="onetime-emoji">🤖</span>
+      <div class="onetime-name">Chatbot Only</div>
+      <div class="onetime-desc">We build and install your AI chatbot once. You own it. You manage it. Simple.</div>
+      <div class="onetime-price-block">
+        <div>
+          <div class="ot-label">One-time fee</div>
+          <div class="ot-suffix">No monthly charge</div>
+        </div>
+        <div class="ot-amount">£499</div>
+      </div>
+      <ul class="onetime-includes">
+        <li><span class="tick">✓</span> Custom chatbot built for your business</li>
+        <li><span class="tick">✓</span> Website & WhatsApp installation</li>
+        <li><span class="tick">✓</span> Automated bookings & FAQs set up</li>
+        <li><span class="tick">✓</span> 30-day support window after launch</li>
+        <li><span class="tick">✓</span> Full handover — it's yours to keep</li>
+      </ul>
+      <div class="onetime-caveat">
+        💡 After 30 days, ongoing tweaks & updates are available as optional monthly support from £49/mo.
+      </div>
+      <a href="#contact" class="plan-cta outline">Get My Chatbot →</a>
+    </div>
+
+    <!-- PHONE BOT ONLY -->
+    <div class="onetime-card reveal">
+      <span class="onetime-emoji">📞</span>
+      <div class="onetime-name">Phone Bot Only</div>
+      <div class="onetime-desc">Stop missing calls forever. We set up your AI phone bot once — it answers every time.</div>
+      <div class="onetime-price-block">
+        <div>
+          <div class="ot-label">One-time fee</div>
+          <div class="ot-suffix">No monthly charge</div>
+        </div>
+        <div class="ot-amount">£599</div>
+      </div>
+      <ul class="onetime-includes">
+        <li><span class="tick">✓</span> AI phone bot built & configured</li>
+        <li><span class="tick">✓</span> Custom voice & greeting for your brand</li>
+        <li><span class="tick">✓</span> Takes bookings & handles FAQs by phone</li>
+        <li><span class="tick">✓</span> SMS confirmation setup included</li>
+        <li><span class="tick">✓</span> 30-day support window after launch</li>
+      </ul>
+      <div class="onetime-caveat">
+        💡 Phone minutes are charged at cost through your provider. Optional monthly management from £59/mo.
+      </div>
+      <a href="#contact" class="plan-cta outline">Get My Phone Bot →</a>
+    </div>
+
+    <!-- BUNDLE BOTH -->
+    <div class="onetime-card bundle reveal" style="border-color: rgba(255,140,0,0.35); box-shadow: 0 8px 32px rgba(255,140,0,0.1);">
+      <span class="onetime-emoji">🚀</span>
+      <div class="onetime-name">Chatbot + Phone Bot</div>
+      <div class="onetime-desc">The full setup — website chatbot and phone bot both built and ready. Best value one-time deal.</div>
+      <div class="onetime-price-block" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2);">
+        <div>
+          <div class="ot-label">One-time bundle</div>
+          <div class="ot-suffix" style="color: #E65C00; font-weight:600;">Save £99 vs buying separate</div>
+        </div>
+        <div class="ot-amount">£999</div>
+      </div>
+      <ul class="onetime-includes">
+        <li><span class="tick">✓</span> Everything in Chatbot Only</li>
+        <li><span class="tick">✓</span> Everything in Phone Bot Only</li>
+        <li><span class="tick">✓</span> Both integrated & working together</li>
+        <li><span class="tick">✓</span> Priority setup — live in 48 hours</li>
+        <li><span class="tick">✓</span> 60-day support window (double the usual)</li>
+        <li><span class="tick">✓</span> Free onboarding call with DK</li>
+      </ul>
+      <div class="onetime-caveat">
+        💡 After 60 days, full monthly management available from £99/mo — or just leave it running on its own!
+      </div>
+      <a href="#contact" class="plan-cta primary">Get the Bundle 🥭</a>
+    </div>
+
+  </div>
+
+  <p class="pricing-note reveal">
+    🔒 All plans are <strong>month-to-month</strong> — no lock-in, no surprises. Not sure which plan is right for you? <a href="#contact">Drop DK a message</a> and he'll give you an honest recommendation, free of charge.
+  </p>
 </section>
 
 <!-- TESTIMONIAL -->
