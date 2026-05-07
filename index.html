@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +8,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* Updated Mango Palette: Green to Yellow transition */
-    --leaf-green: #2D5A27;    /* Deep green like a mango leaf */
-    --mango-skin: #A8C64F;    /* Transitional greenish-yellow */
-    --mango-yellow: #FFD700;  /* Bright ripe yellow */
-    --mango-flesh: #FFB347;   /* Soft orange-gold */
-    --mango-pale: #F9FBE7;    /* Very light cream-green */
-    
+    --mango: #FF8C00;
+    --mango-light: #FFB347;
+    --mango-pale: #FFF3E0;
+    --mango-dark: #E65C00;
+    --yellow: #FFD700;
     --white: #FFFFFF;
-    --off-white: #FCFDF9;
-    --dark: #1A2410;          /* Deep forest-tinted dark */
-    --text: #2C3325;
-    --text-light: #5C6354;
+    --off-white: #FFFBF5;
+    --dark: #1A0A00;
+    --text: #3D1F00;
+    --text-light: #7A5C3A;
     --green: #2ECC71;
   }
 
@@ -42,22 +41,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(252, 253, 249, 0.92);
+    background: rgba(255,251,245,0.92);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(45, 90, 39, 0.1);
+    border-bottom: 1px solid rgba(255,140,0,0.15);
   }
 
   .logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
     font-weight: 900;
-    color: var(--leaf-green);
+    color: var(--mango-dark);
     display: flex;
     align-items: center;
     gap: 0.4rem;
   }
 
-  .logo span { color: var(--mango-skin); }
+  .logo span { color: var(--mango); }
   .logo .emoji { font-size: 1.8rem; }
 
   .nav-links {
@@ -74,20 +73,20 @@
     transition: color 0.3s;
   }
 
-  .nav-links a:hover { color: var(--leaf-green); }
+  .nav-links a:hover { color: var(--mango); }
 
   .nav-cta {
-    background: var(--leaf-green);
+    background: var(--mango);
     color: white !important;
     padding: 0.6rem 1.4rem;
     border-radius: 50px;
     font-weight: 600 !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: background 0.3s, transform 0.2s !important;
   }
 
   .nav-cta:hover {
-    background: var(--dark) !important;
-    transform: scale(1.08) !important;
+    background: var(--mango-dark) !important;
+    transform: translateY(-1px);
   }
 
   /* HERO */
@@ -103,8 +102,8 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 75% 30%, rgba(168, 198, 79, 0.2) 0%, transparent 60%),
-                radial-gradient(ellipse at 15% 70%, rgba(255, 215, 0, 0.15) 0%, transparent 50%);
+    background: radial-gradient(ellipse at 70% 50%, rgba(255,179,71,0.25) 0%, transparent 65%),
+                radial-gradient(ellipse at 20% 80%, rgba(255,140,0,0.12) 0%, transparent 50%);
   }
 
   .hero-blob {
@@ -114,7 +113,7 @@
     transform: translateY(-50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(168, 198, 79, 0.15) 0%, rgba(255, 215, 0, 0.05) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,179,71,0.35) 0%, rgba(255,140,0,0.1) 50%, transparent 70%);
     border-radius: 50%;
     animation: pulse 4s ease-in-out infinite;
   }
@@ -139,9 +138,9 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: rgba(168, 198, 79, 0.15);
-    border: 1px solid rgba(45, 90, 39, 0.2);
-    color: var(--leaf-green);
+    background: rgba(255,140,0,0.12);
+    border: 1px solid rgba(255,140,0,0.3);
+    color: var(--mango-dark);
     padding: 0.4rem 1rem;
     border-radius: 50px;
     font-size: 0.85rem;
@@ -160,7 +159,7 @@
   }
 
   .hero h1 .highlight {
-    color: var(--leaf-green);
+    color: var(--mango);
     position: relative;
   }
 
@@ -171,7 +170,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--mango-yellow);
+    background: var(--mango-light);
     border-radius: 2px;
     opacity: 0.5;
   }
@@ -193,7 +192,7 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, var(--leaf-green), var(--mango-skin));
+    background: var(--mango);
     color: white;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -201,27 +200,27 @@
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s;
-    box-shadow: 0 4px 20px rgba(45, 90, 39, 0.2);
+    box-shadow: 0 4px 20px rgba(255,140,0,0.35);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
   }
 
   .btn-primary:hover {
-    background: var(--dark);
-    transform: scale(1.08);
-    box-shadow: 0 8px 30px rgba(45, 90, 39, 0.3);
+    background: var(--mango-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255,140,0,0.4);
   }
 
   .btn-secondary {
     background: transparent;
-    color: var(--leaf-green);
+    color: var(--mango-dark);
     padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    border: 2px solid var(--leaf-green);
+    border: 2px solid var(--mango);
     transition: all 0.3s;
     display: inline-flex;
     align-items: center;
@@ -230,7 +229,7 @@
 
   .btn-secondary:hover {
     background: var(--mango-pale);
-    transform: scale(1.08);
+    transform: translateY(-2px);
   }
 
   .hero-stats {
@@ -243,7 +242,7 @@
   .stat h3 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: var(--leaf-green);
+    color: var(--mango);
     font-weight: 900;
   }
 
@@ -269,18 +268,13 @@
     background: white;
     border-radius: 16px;
     padding: 1.2rem 1.5rem;
-    box-shadow: 0 8px 32px rgba(45, 90, 39, 0.12);
-    border: 1px solid rgba(45, 90, 39, 0.15);
+    box-shadow: 0 8px 32px rgba(255,140,0,0.12);
+    border: 1px solid rgba(255,140,0,0.15);
     display: flex;
     align-items: center;
     gap: 1rem;
     width: 260px;
     animation: float 3s ease-in-out infinite;
-    transition: transform 0.3s ease;
-  }
-
-  .floating-card:hover {
-    transform: scale(1.08);
   }
 
   .floating-card:nth-child(2) { animation-delay: 0.5s; margin-left: 30px; }
@@ -323,8 +317,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    background: rgba(168, 198, 79, 0.1);
-    color: var(--leaf-green);
+    background: rgba(255,140,0,0.1);
+    color: var(--mango-dark);
     padding: 0.35rem 1rem;
     border-radius: 50px;
     font-size: 0.8rem;
@@ -369,7 +363,7 @@
     background: var(--off-white);
     border-radius: 24px;
     padding: 2.5rem;
-    border: 1px solid rgba(45, 90, 39, 0.1);
+    border: 1px solid rgba(255,140,0,0.1);
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
@@ -380,16 +374,16 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--leaf-green), var(--mango-skin));
+    background: linear-gradient(90deg, var(--mango), var(--yellow));
     transform: scaleX(0);
     transition: transform 0.3s;
     transform-origin: left;
   }
 
   .service-card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 20px 50px rgba(45, 90, 39, 0.15);
-    border-color: rgba(45, 90, 39, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(255,140,0,0.15);
+    border-color: rgba(255,140,0,0.3);
   }
 
   .service-card:hover::before { transform: scaleX(1); }
@@ -430,7 +424,7 @@
 
   .feature-item::before {
     content: '✓';
-    color: var(--leaf-green);
+    color: var(--mango);
     font-weight: 700;
     flex-shrink: 0;
   }
@@ -460,19 +454,19 @@
     padding: 2rem 1.5rem;
     background: white;
     border-radius: 20px;
-    border: 1px solid rgba(45, 90, 39, 0.12);
+    border: 1px solid rgba(255,140,0,0.12);
     transition: all 0.3s;
   }
 
   .step:hover {
-    transform: scale(1.08);
-    box-shadow: 0 12px 40px rgba(45, 90, 39, 0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(255,140,0,0.12);
   }
 
   .step-number {
     width: 52px;
     height: 52px;
-    background: var(--leaf-green);
+    background: var(--mango);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -499,7 +493,7 @@
 
   /* WHY US */
   .why-us {
-    background: linear-gradient(135deg, var(--dark) 0%, #212B18 100%);
+    background: linear-gradient(135deg, var(--dark) 0%, #3D1500 100%);
     color: white;
     position: relative;
     overflow: hidden;
@@ -525,8 +519,8 @@
   }
 
   .why-content .section-tag {
-    background: rgba(168, 198, 79, 0.2);
-    color: var(--mango-skin);
+    background: rgba(255,179,71,0.2);
+    color: var(--mango-light);
   }
 
   .why-content .section-title { color: white; }
@@ -549,7 +543,7 @@
   .why-icon {
     width: 44px;
     height: 44px;
-    background: rgba(168, 198, 79, 0.2);
+    background: rgba(255,140,0,0.2);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -572,7 +566,7 @@
 
   .why-card {
     background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(168, 198, 79, 0.2);
+    border: 1px solid rgba(255,140,0,0.2);
     border-radius: 24px;
     padding: 2.5rem;
   }
@@ -597,7 +591,7 @@
   .result-label { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
 
   .result-value {
-    color: var(--mango-skin);
+    color: var(--mango-light);
     font-weight: 700;
     font-size: 1.1rem;
     font-family: 'Playfair Display', serif;
@@ -618,13 +612,13 @@
     border-radius: 24px;
     padding: 3rem;
     position: relative;
-    border: 1px solid rgba(45, 90, 39, 0.1);
+    border: 1px solid rgba(255,140,0,0.2);
   }
 
   .quote-mark {
     font-family: 'Playfair Display', serif;
     font-size: 5rem;
-    color: var(--leaf-green);
+    color: var(--mango);
     opacity: 0.3;
     line-height: 0.5;
     margin-bottom: 1rem;
@@ -641,10 +635,10 @@
 
   .testimonial-author {
     font-weight: 600;
-    color: var(--leaf-green);
+    color: var(--mango-dark);
   }
 
-  .stars { color: var(--mango-skin); font-size: 1.2rem; margin-bottom: 1rem; }
+  .stars { color: var(--mango); font-size: 1.2rem; margin-bottom: 1rem; }
 
   /* CONTACT */
   .contact {
@@ -688,14 +682,14 @@
     border-radius: 16px;
     text-decoration: none;
     color: var(--text);
-    border: 1px solid rgba(45, 90, 39, 0.15);
+    border: 1px solid rgba(255,140,0,0.15);
     transition: all 0.3s;
   }
 
   .contact-method:hover {
-    border-color: var(--leaf-green);
-    transform: scale(1.08);
-    box-shadow: 0 4px 20px rgba(45, 90, 39, 0.12);
+    border-color: var(--mango);
+    transform: translateX(4px);
+    box-shadow: 0 4px 20px rgba(255,140,0,0.12);
   }
 
   .method-icon {
@@ -716,8 +710,8 @@
     background: white;
     border-radius: 24px;
     padding: 2.5rem;
-    border: 1px solid rgba(45, 90, 39, 0.15);
-    box-shadow: 0 8px 40px rgba(45, 90, 39, 0.08);
+    border: 1px solid rgba(255,140,0,0.15);
+    box-shadow: 0 8px 40px rgba(255,140,0,0.08);
   }
 
   .contact-form h3 {
@@ -744,7 +738,7 @@
   .form-group select {
     width: 100%;
     padding: 0.9rem 1.2rem;
-    border: 1.5px solid rgba(45, 90, 39, 0.2);
+    border: 1.5px solid rgba(255,140,0,0.2);
     border-radius: 12px;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
@@ -757,7 +751,7 @@
   .form-group input:focus,
   .form-group textarea:focus,
   .form-group select:focus {
-    border-color: var(--leaf-green);
+    border-color: var(--mango);
     background: white;
   }
 
@@ -766,7 +760,7 @@
   .form-submit {
     width: 100%;
     padding: 1rem;
-    background: var(--leaf-green);
+    background: var(--mango);
     color: white;
     border: none;
     border-radius: 12px;
@@ -779,9 +773,9 @@
   }
 
   .form-submit:hover {
-    background: var(--dark);
-    transform: scale(1.08);
-    box-shadow: 0 8px 25px rgba(45, 90, 39, 0.35);
+    background: var(--mango-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255,140,0,0.35);
   }
 
   /* FOOTER */
@@ -795,7 +789,7 @@
   .footer-logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
-    color: var(--mango-skin);
+    color: var(--mango);
     margin-bottom: 1rem;
   }
 
@@ -821,7 +815,7 @@
     transition: color 0.3s;
   }
 
-  .footer-links a:hover { color: var(--mango-skin); }
+  .footer-links a:hover { color: var(--mango); }
 
   .footer-bottom {
     font-size: 0.82rem;
@@ -857,7 +851,7 @@
   }
 
   .whatsapp-float:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
     box-shadow: 0 8px 30px rgba(37,211,102,0.5);
   }
 
@@ -868,6 +862,176 @@
     .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
     .nav-links { display: none; }
     .hero-stats { gap: 1.5rem; }
+  }
+
+  /* RESTAURANT IMPACT SECTION */
+  .restaurant-impact {
+    background: linear-gradient(135deg, #1A0A00 0%, #2D0D00 60%, #1A0A00 100%);
+    padding: 5rem 5%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .restaurant-impact::before {
+    content: '📵';
+    position: absolute;
+    font-size: 22rem;
+    opacity: 0.03;
+    left: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .impact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .impact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .impact-tag {
+    display: inline-block;
+    background: rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    color: #FCA5A5;
+    padding: 0.4rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  .impact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 4vw, 2.9rem);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+  }
+
+  .impact-title .red { color: #F87171; }
+
+  .impact-sub {
+    color: rgba(255,255,255,0.55);
+    font-size: 1rem;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .impact-stat {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 1.8rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .impact-stat::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #EF4444, #F97316);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .impact-stat:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-4px);
+    border-color: rgba(248,113,113,0.3);
+  }
+
+  .impact-stat .big-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #F87171;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .impact-stat .stat-label {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  .impact-stat .stat-label strong {
+    display: block;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.92rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .impact-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: rgba(248,113,113,0.08);
+    border: 1px solid rgba(248,113,113,0.2);
+    border-radius: 20px;
+    padding: 1.8rem 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .impact-bottom-text {
+    flex: 1;
+    min-width: 240px;
+  }
+
+  .impact-bottom-text p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .impact-bottom-text p strong {
+    color: #FCA5A5;
+    font-size: 1.05rem;
+  }
+
+  .impact-bottom-cta {
+    flex-shrink: 0;
+  }
+
+  .btn-danger {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+    padding: 0.95rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(239,68,68,0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(239,68,68,0.5);
   }
 
   /* SCROLL ANIMATIONS */
@@ -885,6 +1049,7 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <div class="logo">
     <span class="emoji">🥭</span>
@@ -898,6 +1063,7 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-blob"></div>
@@ -951,6 +1117,62 @@
   </div>
 </section>
 
+<!-- RESTAURANT IMPACT SECTION -->
+<section class="restaurant-impact" id="restaurant-impact">
+  <div class="impact-inner">
+
+    <div class="impact-header reveal">
+      <div class="impact-tag">⚠️ London Restaurants — Read This</div>
+      <h2 class="impact-title">Every Missed Call Is <span class="red">Money Walking Out the Door</span></h2>
+      <p class="impact-sub">The data is clear. London restaurants without AI are quietly bleeding revenue — and most don't even realise it.</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-stat reveal">
+        <div class="big-num">30%</div>
+        <div class="stat-label">
+          <strong>Bookings Missed</strong>
+          of all calls go unanswered during peak service hours
+        </div>
+      </div>
+      <div class="impact-stat reveal">
+        <div class="big-num">83%</div>
+        <div class="stat-label">
+          <strong>Customers Lost Forever</strong>
+          will call a competitor immediately after one missed call
+        </div>
+      </div>
+      <div class="impact-stat reveal">
+        <div class="big-num">21hrs</div>
+        <div class="stat-label">
+          <strong>Staff Time Wasted</strong>
+          every month answering "what are your hours?" — every month
+        </div>
+      </div>
+      <div class="impact-stat reveal">
+        <div class="big-num">18%</div>
+        <div class="stat-label">
+          <strong>Lower Order Values</strong>
+          without AI upselling wine, sides & add-ons automatically
+        </div>
+      </div>
+    </div>
+
+    <div class="impact-bottom reveal">
+      <div class="impact-bottom-text">
+        <p>
+          <strong>The blunt truth:</strong> a typical mid-sized London restaurant is losing between <strong>£2,000 – £10,000 every single month</strong> simply by not having an automated system. That's not a tech problem — that's a revenue problem.
+        </p>
+      </div>
+      <div class="impact-bottom-cta">
+        <a href="#contact" class="btn-danger">Stop the Bleeding — Free Analysis 🔍</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="services-header reveal">
     <div class="section-tag">🛠️ What We Do</div>
@@ -1009,6 +1231,7 @@
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="how-it-works" id="how-it-works">
   <div class="hiw-inner">
     <div class="hiw-header reveal">
@@ -1042,6 +1265,7 @@
   </div>
 </section>
 
+<!-- WHY US -->
 <section class="why-us" id="why-us">
   <div class="why-inner">
     <div class="why-content reveal">
@@ -1110,6 +1334,7 @@
   </div>
 </section>
 
+<!-- TESTIMONIAL -->
 <section class="testimonial-section">
   <div class="testimonial-inner">
     <div class="section-tag" style="margin: 0 auto 1rem;">💬 Happy Clients</div>
@@ -1124,6 +1349,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="contact-info reveal">
@@ -1193,6 +1419,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-logo">🥭 MangoMind AI</div>
   <p class="footer-tagline">Sweet solutions for smarter businesses</p>
@@ -1208,6 +1435,7 @@
   </div>
 </footer>
 
+<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/917037763848" class="whatsapp-float" target="_blank" title="Chat with DK on WhatsApp">💬</a>
 
 <script>
@@ -1238,7 +1466,7 @@
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
-      nav.style.boxShadow = '0 4px 20px rgba(45,90,39,0.1)';
+      nav.style.boxShadow = '0 4px 20px rgba(255,140,0,0.1)';
     } else {
       nav.style.boxShadow = 'none';
     }
